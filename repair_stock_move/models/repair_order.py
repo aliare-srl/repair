@@ -173,9 +173,9 @@ class RepairOrder(models.Model):
 
         self.move_id._set_quantity_done(self.move_id.product_uom_qty)
         self.move_id._action_done()
-        for move in self.mapped("operations.move_id"):
-            move._set_quantity_done(move.product_uom_qty)
-            move._action_done()
+        #for move in self.mapped("operations.move_id"):
+         #   move._set_quantity_done(move.product_uom_qty)
+          #  move._action_done()
         return super().action_repair_end()
 
     def action_repair_done(self):
